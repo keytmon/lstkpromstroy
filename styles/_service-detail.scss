@@ -1,0 +1,54 @@
+@import "mixins", "variables";
+
+.service-detail {
+  padding-bottom: 100px;
+
+  @media (max-width: #{$tablet-lg}) {padding-bottom: 60px;}
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    @media (max-width: #{$tablet-sm}) {flex-direction: column;}
+  }
+
+  &__text {
+    max-width: 700px;
+    margin-bottom: 20px;
+
+    &.preview-text {
+      @include text-spoiler;
+      -webkit-line-clamp: 10;
+      line-clamp: 10;
+    }
+  }
+
+  &__text-btn {
+    text-decoration: underline;
+
+    &:hover {text-decoration: none;}
+  }
+
+  a {color: #FFB706;}
+
+  &__img {
+    background-image: url("/img/services/service-detail-1.jpg");
+    @include bg;
+    width: 700px;
+    height: 455px;
+    background-position: center;
+    object-fit: cover;
+
+    @media (max-width: #{$desktop-sm}) {
+      max-width: 570px;
+      width: 100%;
+    }
+
+    @media (max-width: #{$tablet-lg}) {max-width: 462px;}
+
+    @media (max-width: #{$tablet-sm}) {max-width: 100%;}
+
+    @media (max-width: #{$mobile-lg}) {max-height: 184px;}
+  }
+}

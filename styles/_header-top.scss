@@ -1,0 +1,178 @@
+@import "mixins", "variables";
+
+.header-top {
+  background-color: #12223C;
+  color: #fff;
+
+  @media (max-width: #{$tablet-lg}) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  a {
+    color: #fff;
+    transition: all 0.3s;
+
+    &:hover {
+      color: #FFB706;
+      transition: all 0.3s;
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    margin: 0 auto;
+
+    @media (max-width: #{$desktop-lg}) {
+      padding: 16px 20px;
+      margin: 0 auto;
+    }
+  }
+
+  &__logo {
+    display: none;
+
+    @media (max-width: #{$tablet-lg}) {display: block;}
+  }
+
+  .header-info {
+    position: relative;
+    padding-left: 30px;
+
+    @media (max-width: #{$desktop-sm}) {
+      max-width: 177px;
+
+      &.email {max-width: 200px;}
+    }
+
+    @media (max-width: #{$tablet-lg}) {display: none;}
+  }
+
+  &__contacts {
+    display: contents;
+
+    @media (max-width: #{$tablet-lg}) {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+
+  &__social-info {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    @media (max-width: #{$desktop-sm}) {
+      gap: 20px;
+      display: flex;
+      max-width: 410px;
+      flex-wrap: wrap;
+      position: absolute;
+      z-index: 3;
+      right: 20px;
+      top: 113.4px;
+      background-color: #12223C;
+      border-top: 1px solid rgba(255, 183, 6, 0.1);
+      padding: 20px;
+      border-radius: 0 0 4px 4px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+
+      &.is-open {
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.3s ease;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: #{$tablet-lg}) {display: none;}
+  }
+
+  .break {
+    display: none;
+
+    @media (max-width: #{$desktop-sm}) {display: block;}
+  }
+
+  &__more-btn {
+    @include bg;
+    @include icon;
+    display: none;
+    cursor: pointer;
+    align-items: center;
+    background-image: url("/img/icons/header-more-btn.svg");
+
+    @media (max-width: #{$desktop-sm}) {display: flex;}
+
+    @media (max-width: #{$tablet-lg}) {display: none;}
+  }
+
+  &__call-btn {
+    height: 61px;
+    width: 201px;
+    font-weight: 500;
+
+    @media (max-width: #{$desktop-sm}) {max-width: 192px;}
+
+    @media (max-width: #{$tablet-lg}) {font-weight: normal;}
+
+    @media (max-width: #{$tablet-lg}) {display: none;}
+  }
+
+  .social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    @media (max-width: #{$desktop-sm}) {gap: 10px;}
+}
+
+  &__search-input {
+    display: block;
+    width: 100%;
+    margin-top: 4px;
+  }
+
+  .search.input {
+    display: none;
+
+    @media (max-width: #{$desktop-sm}) {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__mobile-buttons {
+    display: none;
+
+    @media (max-width: #{$tablet-lg}) {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+    }
+  }
+}
+
+.work-schedule,
+.phone {
+  line-height: 180%;
+  text-box-trim: trim-start;
+}
+
+.header-info:before {
+  @include pseudo;
+  @include icon;
+  top: 0;
+  left: 0;
+}

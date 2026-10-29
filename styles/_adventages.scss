@@ -1,0 +1,116 @@
+@import "mixins", "variables";
+
+.advantages {
+
+  .container {
+    background-color: #FFB706;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0 1 50%;
+    gap: 60px;
+    padding: 30px;
+
+    @media (max-width: #{$desktop-sm}) {
+      margin: 0;
+      max-width: 100%;
+    }
+
+    @media (max-width: #{$tablet-lg}) {
+      flex-direction: column;
+      gap: 30px
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {font-size: 64px;}
+
+  &__subtitle {
+    font-size: 40px;
+    margin-bottom: 32px;
+  }
+
+  &__title,
+  &__subtitle {
+    font-weight: bold;
+    line-height: 130%;
+
+    @media (max-width: #{$tablet-lg}) {
+      text-align: center;
+    }
+
+    @media (max-width: #{$tablet-sm}) {
+      font-size: 24px;
+    }
+  }
+
+  &__description {
+    max-width: 650px;
+
+    @media (max-width: #{$desktop-sm}) {
+      max-width: 550px;
+    }
+
+    @media (max-width: #{$tablet-lg}) {
+      max-width: 954px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 650px;
+    column-gap: 20px;
+
+    @media (max-width: #{$desktop-sm}) {
+      max-width: 550px;
+    }
+
+    @media (max-width: #{$tablet-lg}) {
+      max-width: 954px;
+      justify-content: center;
+      row-gap: 20px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    width: 315px;
+    max-width: 315px;
+    height: 100px;
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 106px;
+
+    @media (max-width: #{$desktop-sm}) {max-width: 265px;}
+
+    @media (max-width: #{$tablet-lg}) {
+      max-width: 100%;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: #{$mobile-lg}) {width: 100%;}
+  }
+
+  &__item:before {
+    @include pseudo;
+    height: 80px;
+    width: 80px;
+    left: 0;
+  }
+
+  &__list {
+    .item:nth-child(1):before {background-image: url("/img/main/adventages/advantage-1.svg")}
+    .item:nth-child(2):before {background-image: url("/img/main/adventages/advantage-5.svg")}
+    .item:nth-child(3):before {background-image: url("/img/main/adventages/advantage-2.svg")}
+    .item:nth-child(4):before {background-image: url("/img/main/adventages/advantage-4.svg")}
+    .item:nth-child(5):before {background-image: url("/img/main/adventages/advantage-3.svg")}
+    .item:nth-child(6):before {background-image: url("/img/main/adventages/advantage-6.svg")}
+  }
+}

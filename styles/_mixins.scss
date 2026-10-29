@@ -1,0 +1,24 @@
+@mixin pseudo ($content: '', $display: block, $pos: absolute, $size: contain, $repeat: no-repeat) {
+  content: $content;
+  display: $display;
+  position: $pos;
+  background-size: $size;
+  background-repeat: $repeat;
+}
+
+@mixin icon ($width: 24px, $height: 24px) {
+  width: $width;
+  height: $height;
+}
+
+@mixin bg ($repeat: no-repeat, $size: cover) {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin text-spoiler ($display: -webkit-box, $box-orient: vertical, $overflow: hidden, $word-break: break-word) {
+  display: $display;
+  -webkit-box-orient: $box-orient;
+  overflow: $overflow;
+  word-break: $word-break;
+}

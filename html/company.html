@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+          rel="stylesheet">
+    <link rel="icon" href="/img/icons/favicon.svg" type="image/svg+xml">
+    <title>О компании</title>
+</head>
+<body>
+    <lstk-header></lstk-header>
+    <nav class="breadcrumbs">
+        <div class="container">
+            <div class="breadcrumbs__list" itemscope itemtype="https://schema.org">
+                <div class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org">
+                    <a href="/lstkpromstroy/html/">Главная</a>
+                    <meta itemprop="position" content="1"/>
+                </div>
+                <div class="breadcrumbs__item active" itemprop="itemListElement" itemscope itemtype="https://schema.org">
+                    О компании
+                    <meta itemprop="position" content="2"/>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="text-block">
+        <div class="container">
+            <h1 class="text-block__title title">О компании</h1>
+            <div class="text-block__content">
+                <div class="text-block__text text">
+                    <p>С <span>2014 года</span> мы занимаемся проектированием и строительством быстровозводимых зданий
+                        по технологии ЛСТК. Нами смонтировано и спроектировано <span>более 40 объектов</span> разной
+                        конфигурации. Мы возводим объекты складского хранения и сельского хозяйства, торговые и офисные
+                        центры, производственные здания с нуля до полной готовности к эксплуатации.</p>
+                    <p>ЛСТК – <span>«легкие стальные тонкостенные конструкции»</span> – технология строительства,
+                        которая появилась в Канаде в конце 50-х годов прошлого века и пользуется огромной популярностью
+                        на западе. В Россию она пришла в 90-х годах, и с каждым годом ее популярность «набирает обороты».
+                        Данная технология применяется как при возведении зданий жилого сектора, что повсеместно
+                        используется в пригородах в США и в Японии, так и зданий коммерческого назначения.</p>
+                </div>
+                <div class="text-block__img company-text-img"></div>
+            </div>
+        </div>
+    </div>
+    <lstk-advantages></lstk-advantages>
+    <lstk-projects></lstk-projects>
+    <lstk-clients></lstk-clients>
+    <reviews-block></reviews-block>
+    <callback-form></callback-form>
+    <lstk-footer></lstk-footer>
+    <script type="module" src="../js/app.js"></script>
+</body>
+</html>

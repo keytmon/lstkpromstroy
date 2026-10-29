@@ -1,0 +1,247 @@
+@import "variables";
+
+.cost-calculation {
+  background-color: #12223C;
+  padding: 50px 0;
+
+  @media (max-width: #{$desktop-lg}) {padding: 50px 40px;}
+
+  @media (max-width: #{$desktop-sm}) {padding: 50px 0;}
+
+  &__close-btn {display: none;}
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 24px;
+    gap: 16px;
+
+    @media (max-width: #{$tablet-lg}) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: #{$tablet-sm}) {grid-template-columns: repeat(1, 1fr);}
+  }
+
+  input {
+    width: 271.2px;
+    height: 61px;
+    border-radius: 4px;
+    border: 1px solid #FFB706;
+    color: #fff;
+    background-color: #12223C;
+    padding: 20px;
+    transition: all 0.3s;
+    flex: 1 1 auto;
+
+    @media (max-width: #{$desktop-lg}) {
+      min-width: 214px;
+      width: 100%;
+
+      &.size {min-width: 241px}
+    }
+
+    @media (max-width: #{$desktop-sm}) {
+      max-width: 214px;
+      min-width: 190px;
+
+      &.name {min-width: 160px;}
+
+      &.size {min-width: 180px}
+    }
+
+    @media (max-width: #{$tablet-lg}) {
+      max-width: 464px;
+      min-width: auto;
+      width: 100%;
+
+      &.size {max-width: 464px}
+    }
+
+    @media (max-width: #{$tablet-sm}) {
+      max-width: 100%;
+
+      &.size {max-width: 100%}
+    }
+  }
+
+  &__field {
+    &.is-invalid {
+      input[name="name"] {
+        width: 261.2px;
+        transition: all 0.3s;
+      }
+
+      input[name="phone"] {
+        width: 251.2px;
+        margin-left: 20px;
+        transition: all 0.3s;
+      }
+
+      .form-error-icon:has(+ input[name="phone"]) svg, {
+          transform: translateY(20px) translateX(-9px);
+          transition: transform 0.3s ease;
+      }
+    }
+  }
+
+  input::placeholder {color: #fff;}
+
+  &__btn {
+    width: 271.2px;
+    height: 61px;
+    flex-shrink: 0;
+
+    @media (max-width: #{$desktop-lg}) {
+      min-width: 214px;
+      max-width: 271.2px;
+      width: 100%;
+      flex-shrink: 1;
+    }
+
+    @media (max-width: #{$desktop-sm}) {
+      max-width: 214px;
+      min-width: 160px;
+    }
+
+    @media (max-width: #{$tablet-lg}) {
+      max-width: 464px;
+      width: 100%;
+      min-width: auto;
+    }
+
+    @media (max-width: #{$tablet-sm}) {max-width: 100%;}
+  }
+
+  &__check {width: 100%;}
+
+  &__checkbox-text {
+    font-size: 14px;
+    line-height: 130%;
+    color: #fff;
+    display: block;
+    position: relative;
+    padding-left: 28px;
+    width: 100%;
+    text-align: left;
+
+    a {
+      color: #FFB706;
+      display: inline;
+    }
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.cost-form--modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  &.modal--visible {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cost-calculation {
+    background-color: #12223C;
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 616px;
+    width: 100%;
+    position: relative;
+
+    .container {
+      width: 100%;
+      padding: 0;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: stretch;
+      margin-bottom: 16px;
+    }
+
+    &__row {
+      flex-direction: column;
+
+      @media (max-width: #{$tablet-lg}) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .input {
+      width: 100%;
+      margin-right: 0;
+
+      @media (max-width: #{$desktop-sm}) {
+        max-width: 100%;
+      }
+    }
+
+    &__field {
+      &.is-invalid {
+        input[name="name"],
+        input[name="phone"]  {
+          width: 100%;
+          margin-left: 0;
+        }
+
+        .form-error-icon:has(+ input[name="phone"]) svg, {
+          transform: translateY(20px) translateX(-30px);
+        }
+      }
+    }
+
+    .form-field,
+    .form-policy {width: 100%;}
+
+    &__btn {
+      width: 100%;
+      margin: 8px 0;
+
+      @media (max-width: #{$desktop-lg}) {min-width: 100%;}
+    }
+
+    &__close-btn {
+      display: block;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 32px;
+      color: #ffffff;
+      cursor: pointer;
+      line-height: 1;
+      font-weight: 400;
+      z-index: 5;
+      transition: color 0.2s;
+
+      &:hover {color: #FFB706;}
+    }
+  }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+          rel="stylesheet">
+    <link rel="icon" href="/img/icons/favicon.svg" type="image/svg+xml">
+    <title>Страница не найдена — 404</title>
+</head>
+<body>
+    <lstk-header></lstk-header>
+    <nav class="breadcrumbs">
+        <div class="container">
+            <div class="breadcrumbs__list" itemscope itemtype="https://schema.org">
+                <div class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org">
+                    <a href="/lstkpromstroy/html/">Главная</a>
+                    <meta itemprop="position" content="1"/>
+                </div>
+                <div class="breadcrumbs__item active" itemprop="itemListElement" itemscope itemtype="https://schema.org">
+                    404
+                    <meta itemprop="position" content="2"/>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="error">
+        <div class="container">
+            <div class="error__content">
+                <div class="error__img"><img src="/img/404.png" alt="404"></div>
+                <div class="error__text">Страница не найдена</div>
+                <div class="error__btn btn btn-y text"><a href="/lstkpromstroy/html/">На главную</a></div>
+            </div>
+        </div>
+    </div>
+    <lstk-footer></lstk-footer>
+    <script type="module" src="../js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+.form-error-icon {
+  display: block;
+  position: absolute;
+  z-index: 5;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+
+  svg {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    transform: translateY(20px) translateX(-30px);
+  }
+
+  &.is-visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &--check {
+    svg {
+      top: 0;
+      transform: translateY(-1px) translateX(-30px);
+    }
+  }
+}
+
+.input.input-error {border-color: #EB1111;}
+
+.custom-checkbox.input-error-check .custom-checkbox__text::before {border-color: #EB1111;}

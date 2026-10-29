@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+          rel="stylesheet">
+    <link rel="icon" href="/img/icons/favicon.svg" type="image/svg+xml">
+    <title>Новости</title>
+</head>
+<body>
+    <lstk-header></lstk-header>
+    <nav class="breadcrumbs">
+        <div class="container">
+            <div class="breadcrumbs__list" itemscope itemtype="https://schema.org">
+                <div class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org">
+                    <a href="/lstkpromstroy/">Главная</a>
+                    <meta itemprop="position" content="1"/>
+                </div>
+                <div class="breadcrumbs__item active" itemprop="itemListElement" itemscope itemtype="https://schema.org">
+                    Новости
+                    <meta itemprop="position" content="2"/>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="news">
+        <div class="container">
+            <h1 class="news__title title">Новости</h1>
+            <div class="news__list" id="news-container"></div>
+            <div class="pagination" id="pagination-container"></div>
+        </div>
+    </div>
+    <callback-form></callback-form>
+    <lstk-footer></lstk-footer>
+    <script type="module" src="../js/app.js"></script>
+    <script src="../js/scripts/articles.js"></script>
+    <script>
+        initPage('Новости', 'news-container');
+    </script>
+</body>
+</html>

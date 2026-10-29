@@ -1,0 +1,50 @@
+@import "variables";
+
+.breadcrumbs {
+  padding: 12px 0 16px;
+  margin-top: 36px;
+
+  .container {
+
+    @media (max-width: #{$desktop-lg}) {
+      padding: 0 20px;
+      margin: 0;
+    }
+
+    @media (max-width: #{$desktop-sm}) {padding: 0 63px;}
+
+    @media (max-width: #{$tablet-lg}) {padding: 0 40px;}
+
+    @media (max-width: #{$mobile-lg}) {padding: 0 20px;}
+  }
+
+  &__list {
+    display: flex;
+
+    @media (max-width: #{$tablet-sm}) {
+      max-width: 100%;
+      justify-content: flex-start;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+    }
+  }
+
+  &__item {
+    font-size: 14px;
+    line-height: 130%;
+    color: #12223C;
+    flex-shrink: 0;
+  }
+
+  &__item.active {
+    opacity: 0.6;
+  }
+
+  &__item:not(:last-child):after {
+    content: "/";
+    color: #12223C;
+    margin: 0 4px 0 2px;
+    pointer-events: none;
+  }
+}

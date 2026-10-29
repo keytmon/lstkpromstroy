@@ -1,0 +1,188 @@
+@import "mixins", "variables";
+
+.header-bottom {
+  position: relative;
+  background-color: #fff;
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  &__wrapper {
+    max-height: 111px;
+
+    @media (max-width: #{$tablet-lg}) {display: none;}
+  }
+
+  a {color: #12223C;}
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    margin: 0 auto;
+
+    @media (max-width: 1500px) {padding: 16px 20px;}
+  }
+
+
+  @media (max-width: #{$desktop-lg}) {
+
+    .container {position: relative}
+
+    &__search-input {
+      width: 64px;
+      position: absolute;
+      left: 12%;
+      cursor: pointer;
+      transition: width 0.35s ease-in-out;
+
+      .input {width: 64px;}
+
+      &.is-open {
+        z-index: 3;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        max-width: 100%;
+        width: 300px;
+
+        input {width: 100%;}
+      }
+    }
+  }
+
+  &__menu-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 660px;
+    gap: 40px;
+
+    @media (max-width: #{$desktop-sm}) {
+      margin-right: 20px;
+      gap: 20px;
+    }
+
+    @media (max-width: #{$tablet-lg}) {max-width: 581px;}
+  }
+
+  &__menu-item {
+    position: relative;
+
+    &:first-child {margin-left: 0;}
+
+    a {position: relative;}
+
+    &:hover > a {
+      color: #FFB706;
+      transition: all 0.3s ease;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: #FFB706;
+      }
+    }
+
+    &:hover {
+      .header-bottom__dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      &.menu-arrow {
+        a::after {
+          width: calc(100% + 20px);
+        }
+      }
+    }
+  }
+
+  &__dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: absolute;
+    top: calc(100% + 15px);
+    left: 0;
+    max-width: 350px;
+    background-color: #ffffff;
+    list-style: none;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    padding: 30px;
+    margin: 0;
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 5;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -18px;
+      left: 0;
+      width: 100%;
+      height: 18px;
+      background-color: transparent;
+      display: block;
+      z-index: -1;
+    }
+
+    li {
+      width: 100%;
+      min-width: 290px;
+
+      a {
+        display: block;
+        text-decoration: none;
+        font-size: 16px;
+        line-height: 130%;
+        transition: all 0.2s;
+
+        &:hover {color: #FFB706;}
+      }
+    }
+  }
+
+  &__cost-btn {
+    width: 238px;
+    height: 53px;
+
+    @media (max-width: #{$desktop-sm}) {max-width: 210px;}
+  }
+
+
+
+  .input {
+    margin-right: 20px;
+
+    @media (max-width: #{$desktop-sm}) {display: none;}
+  }
+}
+
+.menu-arrow {
+  position: relative;
+  margin-right: 30px;
+}
+
+.menu-arrow:after {
+  @include pseudo;
+  @include icon;
+  background-image: url("/img/icons/menu-arrow.svg");
+  padding-right: 30px;
+  top: 0;
+  right: 0;
+  transform: translateY(-3px) translateX(32px);
+}

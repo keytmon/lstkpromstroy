@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+          rel="stylesheet">
+    <link rel="icon" href="/img/icons/favicon.svg" type="image/svg+xml">
+    <title>Контакты</title>
+</head>
+<body>
+    <lstk-header></lstk-header>
+    <nav class="breadcrumbs">
+        <div class="container">
+            <div class="breadcrumbs__list" itemscope itemtype="https://schema.org">
+                <div class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org">
+                    <a href="/lstkpromstroy/html/">Главная</a>
+                    <meta itemprop="position" content="1"/>
+                </div>
+                <div class="breadcrumbs__item active" itemprop="itemListElement" itemscope itemtype="https://schema.org">
+                    Контакты
+                    <meta itemprop="position" content="2"/>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="contacts">
+        <div class="container">
+            <h1 class="contacts__title title">Контакты</h1>
+            <div class="contacts__content">
+                <div class="contacts__list" itemscope itemtype="https://schema.org">
+                    <div class="contacts__item text phone"><a href="tel:79130401909">+7 (913) 040-19-09</a></div>
+                    <div class="contacts__item text email">
+                        <a href="mailto:lstk.promstroy@mail.ru">lstk.promstroy@mail.ru</a>
+                    </div>
+                    <div class="contacts__item text address">660043, г. Красноярск, ул. Чернышевского 114, пом. 230</div>
+                    <div class="contacts__item text work-schedule">ПН-ПТ с 09:00 до 18:00<br>СБ-ВС - выходной</div>
+                </div>
+                <div class="contacts__map">
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A78194fd427624eefea005597d3bb225120af5d4ca539fff90095e9dc8bfc94ec&amp;source=constructor" width="100%" allowfullscreen="true" height="467" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <callback-form></callback-form>
+    <lstk-footer></lstk-footer>
+    <script type="module" src="../js/app.js"></script>
+</body>
+</html>

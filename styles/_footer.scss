@@ -1,0 +1,111 @@
+@import "mixins", "variables";
+
+.footer {
+  padding: 100px 0;
+  background-color: #12223C;
+
+  @media (max-width: #{$desktop-lg}) {padding: 100px 20px;}
+
+  @media (max-width: #{$desktop-sm}) {padding: 100px 0;}
+
+  a {
+    color: #fff;
+    transition: all 0.3s;
+
+    &:hover {
+      color: #FFB706;
+      transition: all 0.3s;
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 98px;
+
+    @media (max-width: #{$desktop-sm}) {
+      justify-content: center;
+      gap: 78px;
+    }
+
+    @media (max-width: #{$tablet-lg}) {gap: 60px;}
+
+    @media (max-width: #{$tablet-sm}) {flex-direction: column;}
+  }
+
+  &__logo img {
+
+    @media (max-width: #{$tablet-lg}) {max-width: 238px;}
+
+
+    @media (max-width: #{$mobile-lg}) {max-width: 155px;}
+  }
+
+  &__menu-list {
+    display: contents;
+
+    @media (max-width: #{$tablet-sm}) {
+      display: flex;
+      gap: 76px
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__social {
+    display: flex;
+    max-width: 150px;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  &__info {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__info-item {
+    position: relative;
+    padding-left: 28px;
+  }
+
+  .work-schedule,.phone {
+    line-height: 180%;
+    text-box-trim: trim-start;
+  }
+
+  &__info-item:before {
+    @include pseudo;
+    @include icon;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  .btn {
+    width: 201px;
+    height: 61px;
+    background-color: #12223C;
+    border-radius: 4px;
+    color: #FFB706;
+    border: 1px solid #FFB706;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: #FFB706;
+      color: #fff;
+      transition: all 0.3s;
+    }
+  }
+}

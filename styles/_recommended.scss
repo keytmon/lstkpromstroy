@@ -1,0 +1,36 @@
+@import "variables";
+
+.recommended {
+  padding: 100px 0;
+
+  @media (max-width: #{$tablet-sm}) {padding: 60px 0;}
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    @media (max-width: #{$desktop-sm}) {
+      justify-content: flex-start;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {display: none;}
+    }
+  }
+
+  .item-img.item-1 {background-image: url("/img/services/services-5.jpg");}
+
+  .our-services {
+    &__item {
+      @media (max-width: #{$desktop-lg}) {max-width: 275px;}
+
+      @media (max-width: #{$tablet-lg}) {
+        width: 285px;
+        flex-shrink: 0;
+      }
+    }
+  }
+}

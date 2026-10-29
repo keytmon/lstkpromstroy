@@ -1,0 +1,122 @@
+@import "variables";
+
+.mobile-menu {
+  scrollbar-gutter: stable;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50vw;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 5;
+  overflow-y: auto;
+  padding: 20px;
+  transform: translateX(-102%);
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  @media (max-width: #{$tablet-sm}) {
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  &.is-open {transform: translateX(0);}
+
+  &__header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+  }
+
+  &__close-btn {
+    margin-top: 6px;
+    background: none;
+    border: none;
+    font-size: 62px;
+    font-weight: normal;
+    color: #12223C;
+    cursor: pointer;
+    line-height: 0.5;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .input.search,
+  &__call-btn,
+  &__cost-btn {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  &__menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__menu-item {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+
+    &.active {color: #FFB706;}
+  }
+
+  &__dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.35s ease;
+    will-change: max-height, opacity;
+
+    a {
+      font-weight: normal;
+      font-size: 18px;
+    }
+
+    &.is-open {
+      opacity: 1;
+      max-height: 400px;
+      visibility: visible;
+      margin-top: 30px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__call-btn {
+    height: 61px;
+    font-weight: 500;
+  }
+
+  &__cost-btn {height: 53px;}
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .header-info {
+    position: relative;
+    padding-left: 30px;
+  }
+
+  .social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .social-icon svg {color: #12223C;}
+}

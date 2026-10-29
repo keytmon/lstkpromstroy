@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+          rel="stylesheet">
+    <link rel="icon" href="/img/icons/favicon.svg" type="image/svg+xml">
+    <title>ЛСТКПРОМСТРОЙ</title>
+</head>
+<body>
+    <lstk-header></lstk-header>
+    <div class="search-page">
+        <div class="container">
+            <h1 class="search-page__title title">Результаты поиска по запросу: <span id="search-text"></span></h1>
+            <div class="search-page__results" id="search-results-container"></div>
+            <div class="search-page__no-results search-no-results text" id="search-empty-message">
+                По вашему запросу ничего не найдено. Попробуйте изменить формулировку или перейти в
+                <a href="./services.html">каталог услуг</a>.
+            </div>
+        </div>
+    </div>
+    <lstk-footer></lstk-footer>
+    <script type="module" src="../js/app.js"></script>
+</body>
+</html>
