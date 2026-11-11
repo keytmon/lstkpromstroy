@@ -1,5 +1,27 @@
+@import "variables";
+
 .search-page {
   padding: 100px 0;
+
+  @media (max-width: #{$tablet-lg}) {padding: 60px 0;}
+
+  &__results {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    @media (max-width: #{$desktop-sm}) {grid-template-columns: repeat(3, 1fr);}
+
+    @media (max-width: #{$tablet-lg}) {grid-template-columns: repeat(2, 1fr);}
+
+    @media (max-width: #{$tablet-sm}) {grid-template-columns: 1fr;}
+  }
+
+  .our-services__item {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+  }
 
   &__no-results {display: none;}
 

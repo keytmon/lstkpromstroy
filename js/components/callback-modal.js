@@ -6,24 +6,23 @@
 import { initFormValidation, resetFormValidation } from "../scripts/form-validation.js";
 
 export class CallbackModal extends HTMLElement {
+
     connectedCallback() {
         this.render();
-
-        this.openModal = () => {
-            this.classList.add('modal--visible');
-            document.body.style.overflow = 'hidden';
-        };
-
-        this.closeModal = () => {
-            this.classList.remove('modal--visible');
-            document.body.style.overflow = '';
-
-            const form = this.querySelector('form');
-
-            if (form) resetFormValidation(form);
-        };
-
         this.addListeners();
+    }
+
+    openModal() {
+        this.classList.add('modal--visible');
+        document.body.style.overflow = 'hidden';
+    }
+
+    closeModal() {
+        this.classList.remove('modal--visible');
+        document.body.style.overflow = '';
+
+        const form = this.querySelector('form');
+        if (form) resetFormValidation(form);
     }
 
     render() {

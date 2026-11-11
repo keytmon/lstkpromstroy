@@ -4,6 +4,7 @@
  */
 
 import { initGlobalReviewsListener } from "../scripts/reviews.js";
+import { getDynamicPaths } from '../scripts/dynamic-paths.js';
 
 export class ReviewsBlock extends HTMLElement {
 
@@ -17,6 +18,8 @@ export class ReviewsBlock extends HTMLElement {
     }
 
     render() {
+
+        const {pagePrefix} = getDynamicPaths();
 
         let reviews = '';
 
@@ -54,7 +57,7 @@ export class ReviewsBlock extends HTMLElement {
                         ${reviews}
                     </div>
                     <div class="reviews-block__btn btn btn-y text text-b">
-                        <a href="/lstkpromstroy/html/reviews.html">Больше отзывов</a>
+                        <a href="${pagePrefix}reviews.html">Больше отзывов</a>
                     </div>
                 </div>
             </div>

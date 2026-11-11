@@ -28,13 +28,30 @@ document.addEventListener("DOMContentLoaded", function (){
     initServicesTabs();
     servicesSearch();
 
-    let callbackModal = document.querySelector('#header-call-modal');
+    document.addEventListener('click', (e) => {
+        const callBtn = e.target.closest('.call-btn');
 
-    if (!callbackModal) {
-        callbackModal = document.createElement('callback-modal');
-        callbackModal.id = 'header-call-modal';
-        document.body.appendChild(callbackModal);
-    }
+        if (callBtn) {
+            const mobileMenu = document.querySelector('.mobile-menu');
+
+            if (mobileMenu) {
+                mobileMenu.classList.remove('is-open');
+                document.body.classList.remove('menu-open');
+            }
+
+            let callbackModal = document.querySelector('#callback-modal');
+
+            if (!callbackModal) {
+                callbackModal = document.createElement('callback-modal');
+                callbackModal.id = 'callback-modal';
+                document.body.appendChild(callbackModal);
+            }
+
+            if (typeof callbackModal.openModal === 'function') {
+                callbackModal.openModal();
+            }
+        }
+    });
 
     let costModal = document.querySelector('#header-cost-modal');
 

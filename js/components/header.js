@@ -3,6 +3,8 @@
  * @customElement lstk-header
  */
 
+import { getDynamicPaths } from '../scripts/dynamic-paths.js';
+
 export class LSTKHeader extends HTMLElement {
 
     connectedCallback() {
@@ -31,13 +33,14 @@ export class LSTKHeader extends HTMLElement {
     }
 
     render() {
+        const {pagePrefix, imgPrefix, homePath} = getDynamicPaths();
 
         this.innerHTML = `
             <header>
                 <div class="header-top">
                     <div class='container'>
                         <div class="header-top__logo">
-                             <a href="/lstkpromstroy/html/">
+                             <a href="${homePath}">
                                    <img src="/img/main/header-logo-w.svg" alt="logo">
                              </a>
                         </div>
@@ -100,45 +103,45 @@ export class LSTKHeader extends HTMLElement {
                     <div class="header-bottom">
                         <div class='container'>
                             <div class="header-bottom__logo">
-                                <a href="/lstkpromstroy/html/">
+                                <a href="${homePath}">
                                     <img src="/img/main/header-logo.svg" alt="logo">
                                 </a>
                             </div>
                             <div class="header-bottom__search-input">
-                                <form action="./search.html" method="get">
+                                <form action="${pagePrefix}search.html" method="get">
                                     <input type="search" name="search" class="input search text" placeholder="Поиск" required>
                                 </form>
                             </div>
                             <nav class="header-bottom__menu-list">
                                 <div class="header-bottom__menu-item menu-link text menu-arrow">
-                                <a href="/lstkpromstroy/html/services.html">Услуги</a>
+                                <a href="${pagePrefix}services.html">Услуги</a>
                                 <ul class="header-bottom__dropdown">
-                                    <li><a href="/lstkpromstroy/html/services-detail.html">Магазины из ЛСТК</a></li>
-                                    <li><a href="/lstkpromstroy/html/services-detail.html">Офисные здания, торговые здания, комплексы, центры</a></li>
-                                    <li><a href="/lstkpromstroy/html/services-detail.html">Автокомплексы</a></li>
-                                    <li><a href="/lstkpromstroy/html/services-detail.html">Склады, ангары</a></li>
-                                    <li><a href="/lstkpromstroy/html/services-detail.html">Объекты сельхоз назначения</a></li>
-                                    <li><a href="/lstkpromstroy/html/services-detail.html">Производственные здания</a></li>
+                                    <li><a href="${pagePrefix}services-detail.html">Магазины из ЛСТК</a></li>
+                                    <li><a href="${pagePrefix}services-detail.html">Офисные здания, торговые здания, комплексы, центры</a></li>
+                                    <li><a href="${pagePrefix}services-detail.html">Автокомплексы</a></li>
+                                    <li><a href="${pagePrefix}services-detail.html">Склады, ангары</a></li>
+                                    <li><a href="${pagePrefix}services-detail.html">Объекты сельхоз назначения</a></li>
+                                    <li><a href="${pagePrefix}services-detail.html">Производственные здания</a></li>
                                 </ul>
                                 </div>
                                 <div class="header-bottom__menu-item menu-link text">
-                                <a href="/lstkpromstroy/html/price.html">Цены</a>
+                                <a href="${pagePrefix}price.html">Цены</a>
                                 </div>
                                 <div class="header-bottom__menu-item menu-link text">
-                                <a href="/lstkpromstroy/html/projects.html">Выполненные проекты</a>
+                                <a href="${pagePrefix}projects.html">Выполненные проекты</a>
                                 </div>
                                 <div class="header-bottom__menu-item menu-link text menu-arrow">
-                                    <a href="/lstkpromstroy/html/company.html">О компании</a>
+                                    <a href="${pagePrefix}company.html">О компании</a>
                                     <ul class="header-bottom__dropdown">
-                                        <li><a href="/lstkpromstroy/html/about-technology.html">О технологии ЛСТК</a></li>
-                                        <li><a href="/lstkpromstroy/html/reviews.html">Отзывы</a></li>
-                                        <li><a href="/lstkpromstroy/html/articles.html">Статьи</a></li>
-                                        <li><a href="/lstkpromstroy/html/news.html">Новости</a></li>
-                                        <li><a href="/lstkpromstroy/html/work-scheme.html">Схема работы</a></li>
+                                        <li><a href="${pagePrefix}about-technology.html">О технологии ЛСТК</a></li>
+                                        <li><a href="${pagePrefix}reviews.html">Отзывы</a></li>
+                                        <li><a href="${pagePrefix}articles.html">Статьи</a></li>
+                                        <li><a href="${pagePrefix}news.html">Новости</a></li>
+                                        <li><a href="${pagePrefix}work-scheme.html">Схема работы</a></li>
                                     </ul>
                                 </div>
                                 <div class="header-bottom__menu-item menu-link text">
-                                    <a href="/lstkpromstroy/html/contacts.html">Контакты</a>
+                                    <a href="${pagePrefix}contacts.html">Контакты</a>
                                 </div>
                             </nav>
                             <div class="header-bottom__cost btn btn-w">
@@ -153,35 +156,35 @@ export class LSTKHeader extends HTMLElement {
                     </div>
                     <div class="mobile-menu__content">
                         <div class="mobile-menu__search">
-                            <form action="./search.html" method="get">
+                            <form action="${pagePrefix}search.html" method="get">
                                 <input type="search" name="search" class="input search text" placeholder="Поиск" required>
                             </form>
                         </div>
                         <nav class="mobile-menu__menu-list">
                             <div class="mobile-menu__menu-item services-menu menu-link text menu-arrow">
-                                <a href="/lstkpromstroy/html/services.html">Услуги</a>
+                                <a href="${pagePrefix}services.html">Услуги</a>
                                 <div class="mobile-menu__dropdown services-dropdown">
-                                    <a href="/lstkpromstroy/html/services-detail.html">Магазины из ЛСТК</a>
-                                    <a href="/lstkpromstroy/html/services-detail.html">Офисные здания, торговые здания...</a>
-                                    <a href="/lstkpromstroy/html/services-detail.html">Автокомплексы</a>
-                                    <a href="/lstkpromstroy/html/services-detail.html">Склады, ангары</a>
-                                    <a href="/lstkpromstroy/html/services-detail.html">Объекты сельхоз назначения</a>
-                                    <a href="/lstkpromstroy/html/services-detail.html">Производственные здания</a>
+                                    <a href="${pagePrefix}services-detail.html">Магазины из ЛСТК</a>
+                                    <a href="${pagePrefix}services-detail.html">Офисные здания, торговые здания...</a>
+                                    <a href="${pagePrefix}services-detail.html">Автокомплексы</a>
+                                    <a href="${pagePrefix}services-detail.html">Склады, ангары</a>
+                                    <a href="${pagePrefix}services-detail.html">Объекты сельхоз назначения</a>
+                                    <a href="${pagePrefix}services-detail.html">Производственные здания</a>
                                 </div>
                             </div>
-                            <a href="/lstkpromstroy/html/price.html" class="mobile-menu__menu-item menu-link text">Цены</a>
-                            <a href="/lstkpromstroy/html/projects.html" class="mobile-menu__menu-item menu-link text">Выполненные проекты</a>
+                            <a href=${pagePrefix}price.html" class="mobile-menu__menu-item menu-link text">Цены</a>
+                            <a href="${pagePrefix}projects.html" class="mobile-menu__menu-item menu-link text">Выполненные проекты</a>
                             <div class="mobile-menu__menu-item company-menu menu-link text menu-arrow">
-                                <a href="/lstkpromstroy/html/company.html">О компании</a>
+                                <a href="${pagePrefix}company.html">О компании</a>
                                 <div class="mobile-menu__dropdown company-dropdown">
-                                    <a href="/lstkpromstroy/html/about-technology.html">О технологии ЛСТК</a>
-                                    <a href="/lstkpromstroy/html/reviews.html">Отзывы</a>
-                                    <a href="/lstkpromstroy/html/articles.html">Статьи</a>
-                                    <a href="/lstkpromstroy/html/news.html">Новости</a>
-                                    <a href="/lstkpromstroy/html/work-scheme.html">Схема работы</a>
+                                    <a href="${pagePrefix}about-technology.html">О технологии ЛСТК</a>
+                                    <a href="${pagePrefix}reviews.html">Отзывы</a>
+                                    <a href="${pagePrefix}articles.html">Статьи</a>
+                                    <a href="${pagePrefix}news.html">Новости</a>
+                                    <a href="${pagePrefix}work-scheme.html">Схема работы</a>
                                 </div>
                             </div>
-                            <a href="/lstkpromstroy/html/contacts.html" class="mobile-menu__menu-item menu-link text">Контакты</a>
+                            <a href="${pagePrefix}contacts.html" class="mobile-menu__menu-item menu-link text">Контакты</a>
                         </nav>
                         <div class="mobile-menu__buttons">
                             <div class="mobile-menu__call-btn btn btn-y">
@@ -225,7 +228,6 @@ export class LSTKHeader extends HTMLElement {
 
     addListeners() {
         const costBtns = this.querySelectorAll('.cost-btn');
-        const callBtns = this.querySelectorAll('.call-btn');
         const moreBtn = this.querySelector('.header-top__more-btn');
         const socialInfo = this.querySelector('.header-top__social-info');
         const burgerBtn = this.querySelector('.header-top__burger-btn');
@@ -248,21 +250,6 @@ export class LSTKHeader extends HTMLElement {
 
                     if (costModal && typeof costModal.openModal === 'function') {
                         costModal.openModal();
-                    }
-                });
-            });
-        }
-
-        if (callBtns.length > 0) {
-            callBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-
-                    if (mobileMenu) mobileMenu.classList.remove('is-open');
-
-                    const callModal = document.querySelector('#header-call-modal');
-
-                    if (callModal && typeof callModal.openModal === 'function') {
-                        callModal.openModal();
                     }
                 });
             });

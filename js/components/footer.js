@@ -3,6 +3,8 @@
  * @customElement lstk-footer
  */
 
+import { getDynamicPaths } from '../scripts/dynamic-paths.js';
+
 export class LSTKFooter extends HTMLElement {
 
     connectedCallback() {
@@ -11,21 +13,23 @@ export class LSTKFooter extends HTMLElement {
 
     render() {
 
+        const {pagePrefix, imgPrefix, homePath} = getDynamicPaths();
+
         this.innerHTML = `
            <footer class="footer">
                 <div class="container">
                     <div class="footer__logo"><img src="/img/main/footer-logo.svg" alt="logo"></div>
                     <div class="footer__menu-list">
                         <nav class="footer__menu menu-l">
-                            <a href="/lstkpromstroy/html/services.html" class="footer__menu-item text">Услуги</a>
-                            <a href="/lstkpromstroy/html/price.html" class="footer__menu-item text">Цены</a>
-                            <a href="/lstkpromstroy/html/projects.html" class="footer__menu-item text">Наши объекты</a>
-                            <a href="/lstkpromstroy/html/company.html" class="footer__menu-item text">О компании</a>
-                            <a href="/lstkpromstroy/html/contacts.html" class="footer__menu-item text">Контакты</a>
+                            <a href="${pagePrefix}services.html" class="footer__menu-item text">Услуги</a>
+                            <a href="${pagePrefix}price.html" class="footer__menu-item text">Цены</a>
+                            <a href="${pagePrefix}projects.html" class="footer__menu-item text">Наши объекты</a>
+                            <a href="${pagePrefix}company.html" class="footer__menu-item text">О компании</a>
+                            <a href="${pagePrefix}contacts.html" class="footer__menu-item text">Контакты</a>
                         </nav>
                         <nav class="footer__menu menu-r">
-                            <a href="/lstkpromstroy/html/work-scheme.html" class="footer__menu-item text">Условия работы</a>
-                            <a href="/lstkpromstroy/html/articles.html" class="footer__menu-item text">Статьи</a>
+                            <a href="${pagePrefix}work-scheme.html" class="footer__menu-item text">Условия работы</a>
+                            <a href="${pagePrefix}articles.html" class="footer__menu-item text">Статьи</a>
                         </nav>
                     </div>
                     <div class="footer__contacts">
@@ -54,7 +58,7 @@ export class LSTKFooter extends HTMLElement {
                             <div class="footer__info-item address text">г. Красноярск,<br>ул. Чернышевского 114, пом. 230</div>
                             <div class="footer__info-item work-schedule text">ПН-ПТ с 09:00 до 18:00<br>СБ-ВС - выходной</div>
                             <div class="footer__btl btn btn-y">
-                                <button class="footer__call-btn text text-b">Заказать звонок</button>
+                                <button class="footer__call-btn call-btn text text-b" type="button">Заказать звонок</button>
                             </div>
                             <div class="footer__info-item phone text">Бесплатная консультация<br><a href="tel:+79130401909">+7 (913) 040-19-09</a></div>
                         </div>

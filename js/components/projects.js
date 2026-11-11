@@ -4,6 +4,7 @@
  */
 
 import { initNativeScrollSlider } from "../scripts/slider-scroll.js";
+import { getDynamicPaths } from '../scripts/dynamic-paths.js';
 
 export class LSTKProjects extends HTMLElement {
 
@@ -19,10 +20,12 @@ export class LSTKProjects extends HTMLElement {
 
     render(repeatCount) {
 
+        const {pagePrefix} = getDynamicPaths();
+
         let projectsItemsHTML = '';
 
         const projectsSetHTML = `
-             <a href="/lstkpromstroy/html/projects-detail.html" class="projects__item-btn-link projects-item-btn-link">
+             <a href="${pagePrefix}projects-detail.html" class="projects__item-btn-link projects-item-btn-link">
                    <div class="projects__item projects-item">
                         <div class="projects__item-category item-category">Торгово-развлекательный центр</div>
                         <div class="projects__item-img projects-item-img">
@@ -31,7 +34,7 @@ export class LSTKProjects extends HTMLElement {
                         <div class="projects__item-title projects-item-title text">Торгово-развлекательный центр<br>«Стрелец»</div>
                    </div>
              </a>
-             <a href="/lstkpromstroy/html/projects-detail.html" class="projects__item-btn-link projects-item-btn-link">
+             <a href="${pagePrefix}projects-detail.html" class="projects__item-btn-link projects-item-btn-link">
                   <div class="projects__item projects-item">
                         <div class="projects__item-category item-category">Склад</div>
                         <div class="projects__item-img projects-item-img">
@@ -40,7 +43,7 @@ export class LSTKProjects extends HTMLElement {
                         <div class="projects__item-title projects-item-title text">Склад хранения материалов</div>
                   </div>
              </a>
-             <a href="/lstkpromstroy/html/projects-detail.html" class="projects__item-btn-link projects-item-btn-link">
+             <a href="${pagePrefix}projects-detail.html" class="projects__item-btn-link projects-item-btn-link">
                    <div class="projects__item projects-item">
                         <div class="projects__item-category item-category">Автосервис</div>
                              <div class="projects__item-img projects-item-img">
@@ -49,7 +52,7 @@ export class LSTKProjects extends HTMLElement {
                         <div class="projects__item-title projects-item-title text">СТО, г. Красноярск</div>
                         </div>
              </a>
-             <a href="/lstkpromstroy/html/projects-detail.html" class="projects__item-btn-link projects-item-btn-link">
+             <a href="${pagePrefix}projects-detail.html" class="projects__item-btn-link projects-item-btn-link">
                    <div class="projects__item projects-item">
                         <div class="projects__item-category item-category">Комплекс</div>
                              <div class="projects__item-img projects-item-img">
@@ -78,7 +81,7 @@ export class LSTKProjects extends HTMLElement {
                     </div>
                     <div class="projects__pagination"></div>
                     <div class="projects__btn btn btn-y text text-b">
-                    <a href="/lstkpromstroy/html/projects.html">Посмотреть все работы</a>
+                        <a href="${pagePrefix}projects.html">Посмотреть все работы</a>
                     </div>
                 </div>
             </div>

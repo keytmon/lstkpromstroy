@@ -56,7 +56,7 @@ export class ReviewsModal extends HTMLElement {
                         <button type="submit" class="reviews-modal__submit-btn btn btn-y text text-b">Отправить</button>
                     </form>
                     <div class="reviews-modal__policy">
-                        Нажимая кнопку вы соглашаетесь на <a href="#">обработку персональных данных</a>
+                        Нажимая кнопку вы соглашаетесь на <a href="">обработку персональных данных</a>
                     </div>
                 </div>
                 <div class="reviews-modal__container modal__container--success" id="modal-step-success">

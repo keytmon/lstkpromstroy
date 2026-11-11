@@ -67,7 +67,7 @@ export const servicesSearch = () => {
 
               cardLink.innerHTML = `
                  <div class="our-services__item">
-                      <div class="our-services__item-img item-img ${item.img}">
+                      <div class="our-services__item-img item-img" style="background-image: url('${item.img}');">
                            <div class="our-services__item-btn services-item-btn text">Подробнее</div>
                       </div>
                       <div class="our-services__item-title text">${item.title}</div>
