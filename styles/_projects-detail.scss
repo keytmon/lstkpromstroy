@@ -24,7 +24,7 @@
   &__images {min-width: 0}
 
   &__main-img {
-    background-image: url("/img/projects/project-1-detail.jpg");
+    background-image: url("../img/projects/project-1-detail.jpg");
     @include bg;
     width: 700px;
     max-width: 100%;
@@ -49,7 +49,7 @@
   }
 
   &__gallery-item {
-    background-image: url("/img/projects/project-1-detail.jpg");
+    background-image: url("../img/projects/project-1-detail.jpg");
     @include bg;
     width: 220px;
     max-width: 100%;

@@ -3,11 +3,16 @@
  * @customElement lstk-article
  */
 
+import { getDynamicPaths } from '../scripts/dynamic-paths.js';
+
 export class LSTKArticle extends HTMLElement {
 
     connectedCallback() {
+        const {pagePrefix} = getDynamicPaths();
         const articleTitle = this.getAttribute('title') || 'Название';
-        const articleUrl = this.getAttribute('url') || '#';
+        const rawUrl = this.getAttribute('url') || 'article-detail.html';
+        const articleUrl = `${pagePrefix}${rawUrl}`;
+
         this.render(articleTitle, articleUrl);
     }
 

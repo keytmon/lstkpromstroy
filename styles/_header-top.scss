@@ -110,7 +110,7 @@
     display: none;
     cursor: pointer;
     align-items: center;
-    background-image: url("/img/icons/header-more-btn.svg");
+    background-image: url("../img/icons/header-more-btn.svg");
 
     @media (max-width: #{$desktop-sm}) {display: flex;}
 

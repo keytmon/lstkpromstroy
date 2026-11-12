@@ -30,7 +30,10 @@ const initTocHighlight = () => {
 };
 
 const initRelatedPosts = (containerId, contentType) => {
+
     const container = document.getElementById(containerId);
+    const isArticle = contentType === 'Статьи' || contentType === 'Статья';
+    const cardUrl = isArticle ? 'article-detail.html' : 'news-detail.html';
 
     if (!container) return;
 
@@ -40,14 +43,14 @@ const initRelatedPosts = (containerId, contentType) => {
 
         const card = document.createElement('lstk-article');
 
-        const recommendedTitle = contentType === 'Статьи'
+        const recommendedTitle = isArticle
             ? `Название статьи №${i}`
             : `Заголовок №${i}`;
 
         card.setAttribute('title', recommendedTitle);
+        card.setAttribute('url', cardUrl);
         container.appendChild(card);
     }
 };
 
-document.addEventListener('DOMContentLoaded', initRelatedPosts);
 document.addEventListener('DOMContentLoaded', initTocHighlight);

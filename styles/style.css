@@ -104,19 +104,19 @@ a {
 }
 
 .address:before {
-  background-image: url("/img/icons/location.svg");
+  background-image: url("../img/icons/location.svg");
 }
 
 .phone:before {
-  background-image: url("/img/icons/phone.svg");
+  background-image: url("../img/icons/phone.svg");
 }
 
 .work-schedule:before {
-  background-image: url("/img/icons/clock.svg");
+  background-image: url("../img/icons/clock.svg");
 }
 
 .email:before {
-  background-image: url("/img/icons/email.svg");
+  background-image: url("../img/icons/email.svg");
 }
 
 .work-schedule,
@@ -222,7 +222,7 @@ h2,
   border: 1px solid #FFB706;
   height: 40px;
   width: 300px;
-  background-image: url("/img/icons/search-icon.svg");
+  background-image: url("../img/icons/search-icon.svg");
   background-repeat: no-repeat;
   background-position: 20px center;
   padding-right: 10px;
@@ -247,11 +247,11 @@ h2,
   cursor: pointer;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("/img/icons/slider-arrow.svg");
+  background-image: url("../img/icons/slider-arrow.svg");
   transition: all 0.3s;
 }
 .arrow:hover:not(.disabled) {
-  background-image: url("/img/icons/slider-arrow-y.svg");
+  background-image: url("../img/icons/slider-arrow-y.svg");
   transition: all 0.3s;
 }
 .arrow.disabled {
@@ -333,7 +333,7 @@ h2,
   transition: all 0.2s;
 }
 .custom-checkbox__input:checked + .custom-checkbox__text::before {
-  background-image: url("/img/icons/checkbox-checked.svg");
+  background-image: url("../img/icons/checkbox-checked.svg");
   height: 20px;
   width: 20px;
   background-repeat: no-repeat;
@@ -383,19 +383,19 @@ h2,
 }
 
 .projects-item-btn-link:nth-child(4n+1) .projects-item-img {
-  background-image: url("/img/projects/project-1.jpg");
+  background-image: url("../img/projects/project-1.jpg");
 }
 
 .projects-item-btn-link:nth-child(4n+2) .projects-item-img {
-  background-image: url("/img/projects/project-2.jpg");
+  background-image: url("../img/projects/project-2.jpg");
 }
 
 .projects-item-btn-link:nth-child(4n+3) .projects-item-img {
-  background-image: url("/img/projects/project-3.jpg");
+  background-image: url("../img/projects/project-3.jpg");
 }
 
 .projects-item-btn-link:nth-child(4n+4) .projects-item-img {
-  background-image: url("/img/projects/project-4.jpg");
+  background-image: url("../img/projects/project-4.jpg");
 }
 
 .projects-item-btn,
@@ -544,7 +544,7 @@ h2,
   display: none;
   cursor: pointer;
   align-items: center;
-  background-image: url("/img/icons/header-more-btn.svg");
+  background-image: url("../img/icons/header-more-btn.svg");
 }
 @media (max-width: 1280px) {
   .header-top__more-btn {
@@ -813,7 +813,7 @@ h2,
   background-repeat: no-repeat;
   width: 24px;
   height: 24px;
-  background-image: url("/img/icons/menu-arrow.svg");
+  background-image: url("../img/icons/menu-arrow.svg");
   padding-right: 30px;
   top: 0;
   right: 0;
@@ -870,7 +870,7 @@ h2,
 .slider__slide {
   z-index: 0;
   position: relative;
-  background-image: url("/img/main/banner.png");
+  background-image: url("../img/main/banner.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 800px;
@@ -900,7 +900,7 @@ h2,
   height: 100%;
   top: 0;
   left: 0;
-  background-image: url("/img/main/bg.png");
+  background-image: url("../img/main/bg.png");
   background-size: cover;
   background-position: center;
 }
@@ -917,7 +917,7 @@ h2,
 }
 .slider .arrow {
   top: 47%;
-  background-image: url("/img/icons/slider-arrow-y.svg");
+  background-image: url("../img/icons/slider-arrow-y.svg");
 }
 .slider .arrow:hover {
   filter: brightness(0.9);
@@ -1238,7 +1238,7 @@ h2,
   }
 }
 .about-us__img {
-  background-image: url("/img/main/about-img.jpg");
+  background-image: url("../img/main/about-img.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 369px;
@@ -1266,7 +1266,7 @@ h2,
   color: #FFB706;
 }
 .about-us__bottom {
-  background-image: url("/img/main/about-us-bottom.png");
+  background-image: url("../img/main/about-us-bottom.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 225px;
@@ -1391,22 +1391,22 @@ h2,
   left: 0;
 }
 .advantages__list .item:nth-child(1):before {
-  background-image: url("/img/main/adventages/advantage-1.svg");
+  background-image: url("../img/main/adventages/advantage-1.svg");
 }
 .advantages__list .item:nth-child(2):before {
-  background-image: url("/img/main/adventages/advantage-5.svg");
+  background-image: url("../img/main/adventages/advantage-5.svg");
 }
 .advantages__list .item:nth-child(3):before {
-  background-image: url("/img/main/adventages/advantage-2.svg");
+  background-image: url("../img/main/adventages/advantage-2.svg");
 }
 .advantages__list .item:nth-child(4):before {
-  background-image: url("/img/main/adventages/advantage-4.svg");
+  background-image: url("../img/main/adventages/advantage-4.svg");
 }
 .advantages__list .item:nth-child(5):before {
-  background-image: url("/img/main/adventages/advantage-3.svg");
+  background-image: url("../img/main/adventages/advantage-3.svg");
 }
 .advantages__list .item:nth-child(6):before {
-  background-image: url("/img/main/adventages/advantage-6.svg");
+  background-image: url("../img/main/adventages/advantage-6.svg");
 }
 
 .reviews-block {
@@ -1506,7 +1506,7 @@ h2,
 .reviews-block__item-img {
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("/img/main/review-pic.png");
+  background-image: url("../img/main/review-pic.png");
   width: 100px;
   height: 100px;
   margin-right: 20px;
@@ -1994,7 +1994,7 @@ h2,
 .main-text-block__img {
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("/img/text-block-img/text-img.jpg");
+  background-image: url("../img/text-block-img/text-img.jpg");
   width: 100%;
   height: 369px;
   background-position: center;
@@ -2124,7 +2124,7 @@ h2,
 .callback__img {
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("/img/main/callback-form-img.jpg");
+  background-image: url("../img/main/callback-form-img.jpg");
   width: 850px;
   height: 700px;
 }
@@ -2358,10 +2358,10 @@ h2,
   }
 }
 .text-block .company-text-img {
-  background-image: url("/img/text-block-img/company-text-img.jpg");
+  background-image: url("../img/text-block-img/company-text-img.jpg");
 }
 .text-block .technology-text-img {
-  background-image: url("/img/text-block-img/technology-text-img.jpg");
+  background-image: url("../img/text-block-img/technology-text-img.jpg");
 }
 
 .work-scheme {
@@ -2756,7 +2756,7 @@ h2,
   color: #FFB706;
 }
 .service-detail__img {
-  background-image: url("/img/services/service-detail-1.jpg");
+  background-image: url("../img/services/service-detail-1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 700px;
@@ -2812,7 +2812,7 @@ h2,
   }
 }
 .recommended .item-img.item-1 {
-  background-image: url("/img/services/services-5.jpg");
+  background-image: url("../img/services/services-5.jpg");
 }
 @media (max-width: 1440px) {
   .recommended .our-services__item {
@@ -2858,7 +2858,7 @@ h2,
   min-width: 0;
 }
 .project-detail__main-img {
-  background-image: url("/img/projects/project-1-detail.jpg");
+  background-image: url("../img/projects/project-1-detail.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 700px;
@@ -2891,7 +2891,7 @@ h2,
   }
 }
 .project-detail__gallery-item {
-  background-image: url("/img/projects/project-1-detail.jpg");
+  background-image: url("../img/projects/project-1-detail.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 220px;
@@ -2921,10 +2921,12 @@ h2,
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+  scroll-margin-top: 460px;
 }
 @media (max-width: 1024px) {
   .articles__list, .news__list {
     grid-template-columns: repeat(3, 1fr);
+    scroll-margin-top: 300px;
   }
 }
 @media (max-width: 768px) {
@@ -3262,7 +3264,7 @@ h2,
 .reviews__item-img {
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("/img/main/review-pic.png");
+  background-image: url("../img/main/review-pic.png");
   width: 100px;
   height: 100px;
   flex-shrink: 0;

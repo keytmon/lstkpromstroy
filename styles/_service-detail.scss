@@ -33,7 +33,7 @@
   a {color: #FFB706;}
 
   &__img {
-    background-image: url("/img/services/service-detail-1.jpg");
+    background-image: url("../img/services/service-detail-1.jpg");
     @include bg;
     width: 700px;
     height: 455px;

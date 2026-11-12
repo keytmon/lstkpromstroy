@@ -32,13 +32,13 @@ header {
 
 a {color: #12223C}
 
-.address:before {background-image: url("/img/icons/location.svg");}
+.address:before {background-image: url("../img/icons/location.svg");}
 
-.phone:before {background-image: url("/img/icons/phone.svg");}
+.phone:before {background-image: url("../img/icons/phone.svg");}
 
-.work-schedule:before {background-image: url("/img/icons/clock.svg");}
+.work-schedule:before {background-image: url("../img/icons/clock.svg");}
 
-.email:before {background-image: url("/img/icons/email.svg");}
+.email:before {background-image: url("../img/icons/email.svg");}
 
 .work-schedule,
 .phone {
@@ -132,7 +132,7 @@ h2,
   border: 1px solid #FFB706;
   height: 40px;
   width: 300px;
-  background-image: url("/img/icons/search-icon.svg");
+  background-image: url("../img/icons/search-icon.svg");
   background-repeat: no-repeat;
   background-position: 20px center;
   padding-right: 10px;
@@ -157,11 +157,11 @@ h2,
   cursor: pointer;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("/img/icons/slider-arrow.svg");
+  background-image: url("../img/icons/slider-arrow.svg");
   transition: all 0.3s;
 
   &:hover:not(.disabled) {
-    background-image: url("/img/icons/slider-arrow-y.svg");
+    background-image: url("../img/icons/slider-arrow-y.svg");
     transition: all 0.3s;
   }
 
@@ -236,7 +236,7 @@ h2,
   }
 
   &__input:checked + .custom-checkbox__text::before {
-    background-image: url("/img/icons/checkbox-checked.svg");
+    background-image: url("../img/icons/checkbox-checked.svg");
     height: 20px;
     width: 20px;
     background-repeat: no-repeat;
@@ -285,13 +285,13 @@ h2,
 
 .projects-item-btn-link {display: block}
 
-.projects-item-btn-link:nth-child(4n + 1) .projects-item-img {background-image: url("/img/projects/project-1.jpg");}
+.projects-item-btn-link:nth-child(4n + 1) .projects-item-img {background-image: url("../img/projects/project-1.jpg");}
 
-.projects-item-btn-link:nth-child(4n + 2) .projects-item-img {background-image: url("/img/projects/project-2.jpg");}
+.projects-item-btn-link:nth-child(4n + 2) .projects-item-img {background-image: url("../img/projects/project-2.jpg");}
 
-.projects-item-btn-link:nth-child(4n + 3) .projects-item-img {background-image: url("/img/projects/project-3.jpg");}
+.projects-item-btn-link:nth-child(4n + 3) .projects-item-img {background-image: url("../img/projects/project-3.jpg");}
 
-.projects-item-btn-link:nth-child(4n + 4) .projects-item-img {background-image: url("/img/projects/project-4.jpg");}
+.projects-item-btn-link:nth-child(4n + 4) .projects-item-img {background-image: url("../img/projects/project-4.jpg");}
 
 .projects-item-btn,
 .services-item-btn {

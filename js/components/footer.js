@@ -13,12 +13,12 @@ export class LSTKFooter extends HTMLElement {
 
     render() {
 
-        const {pagePrefix, imgPrefix, homePath} = getDynamicPaths();
+        const {pagePrefix, imgPrefix} = getDynamicPaths();
 
         this.innerHTML = `
            <footer class="footer">
                 <div class="container">
-                    <div class="footer__logo"><img src="/img/main/footer-logo.svg" alt="logo"></div>
+                    <div class="footer__logo"><img src="${imgPrefix}main/footer-logo.svg" alt="logo"></div>
                     <div class="footer__menu-list">
                         <nav class="footer__menu menu-l">
                             <a href="${pagePrefix}services.html" class="footer__menu-item text">Услуги</a>

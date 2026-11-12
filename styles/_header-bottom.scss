@@ -180,7 +180,7 @@
 .menu-arrow:after {
   @include pseudo;
   @include icon;
-  background-image: url("/img/icons/menu-arrow.svg");
+  background-image: url("../img/icons/menu-arrow.svg");
   padding-right: 30px;
   top: 0;
   right: 0;

@@ -18,14 +18,19 @@ export class LSTKHeader extends HTMLElement {
             if (!headerTop || !headerBottom) return;
 
             const headerTopHeight = headerTop.offsetHeight;
+            const headerBottomHeight = headerBottom.offsetHeight;
+
+            this.style.display = 'block';
 
             window.addEventListener('scroll', () => {
 
-                if (window.scrollY > headerTopHeight) {
-                    headerBottom.classList.add('fixed');
-                } else {
-                    headerBottom.classList.remove('fixed');
-                }
+                const isFixed = window.scrollY > headerTopHeight;
+
+                if (headerBottom.classList.contains('fixed') === isFixed) return;
+
+                headerBottom.classList.toggle('fixed', isFixed);
+
+                this.style.paddingBottom = isFixed ? `${headerBottomHeight}px` : '0px';
             });
         };
 
@@ -41,7 +46,7 @@ export class LSTKHeader extends HTMLElement {
                     <div class='container'>
                         <div class="header-top__logo">
                              <a href="${homePath}">
-                                   <img src="/img/main/header-logo-w.svg" alt="logo">
+                                   <img src="${imgPrefix}main/header-logo-w.svg" alt="logo">
                              </a>
                         </div>
                         <div class="header-top__address address text header-info">г. Красноярск,<br>ул.&nbsp;Чернышевского 114, пом. 230
@@ -91,10 +96,10 @@ export class LSTKHeader extends HTMLElement {
                         </div>
                         <div class="header-top__mobile-buttons">
                             <a href="tel:79130401909" class="header-top__mobile-phone-btn" aria-label="Позвонить">
-                                <img src="/img/main/header-phone-icon.svg" alt="phone">
+                                <img src="${imgPrefix}main/header-phone-icon.svg" alt="phone">
                             </a>
                             <button class="header-top__burger-btn burger-btn" type="button" aria-label="Открыть меню">
-                                <img src="/img/main/header-burger-icon.svg" alt="menu">
+                                <img src="${imgPrefix}main/header-burger-icon.svg" alt="menu">
                             </button>
                         </div>
                     </div>
@@ -104,7 +109,7 @@ export class LSTKHeader extends HTMLElement {
                         <div class='container'>
                             <div class="header-bottom__logo">
                                 <a href="${homePath}">
-                                    <img src="/img/main/header-logo.svg" alt="logo">
+                                    <img src="${imgPrefix}main/header-logo.svg" alt="logo">
                                 </a>
                             </div>
                             <div class="header-bottom__search-input">

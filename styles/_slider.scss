@@ -41,7 +41,7 @@
   &__slide {
     z-index: 0;
     position: relative;
-    background-image: url("/img/main/banner.png");
+    background-image: url("../img/main/banner.png");
     @include bg;
     height: 800px;
     max-height: 100%;
@@ -61,7 +61,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background-image: url("/img/main/bg.png");
+    background-image: url("../img/main/bg.png");
     background-size: cover;
     background-position: center;
 
@@ -75,7 +75,7 @@
 
   .arrow {
     top:47%;
-    background-image: url("/img/icons/slider-arrow-y.svg");
+    background-image: url("../img/icons/slider-arrow-y.svg");
 
     &:hover {filter: brightness(0.9);}
   }

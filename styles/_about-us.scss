@@ -36,7 +36,7 @@
   }
 
   &__img {
-    background-image: url("/img/main/about-img.jpg");
+    background-image: url("../img/main/about-img.jpg");
     @include bg;
     height: 369px;
     width: 700px;
@@ -60,7 +60,7 @@
   span {color: #FFB706;}
 
   &__bottom {
-    background-image: url("/img/main/about-us-bottom.png");
+    background-image: url("../img/main/about-us-bottom.png");
     @include bg;
     height: 225px;
     width: 100%;

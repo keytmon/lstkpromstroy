@@ -48,9 +48,9 @@ const setupPagination = (allItems, containerId, contentType) => {
             dots.classList.add('pagination__item', 'pagination__item--dots');
             paginationContainer.appendChild(dots);
         } else {
-            const btn = document.createElement('a');
+            const btn = document.createElement('button');
 
-            btn.href = '#';
+            btn.type = 'button';
             btn.textContent = item;
             btn.classList.add('pagination__item');
 
@@ -84,8 +84,7 @@ const initPage = (contentType, containerId) => {
     const savedPage = localStorage.getItem(`page_${contentType}`);
 
     currentPage = savedPage ? parseInt(savedPage, 10) : 1;
-
-    currentPage = parseInt(localStorage.getItem(`page_${contentType}`)) || 1;
+    // currentPage = parseInt(localStorage.getItem(`page_${contentType}`)) || 1;
 
     const allItems = [];
 
@@ -94,6 +93,7 @@ const initPage = (contentType, containerId) => {
 
             ? `Название статьи №${i}`
             : `Заголовок №${i}`;
+
         const cardUrl = contentType === 'Статьи'  ? 'article-detail.html' : 'news-detail.html' ;
 
         allItems.push({ title: cardTitle, url: cardUrl });

@@ -11,14 +11,17 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    scroll-margin-top: 460px;
 
-    @media (max-width: #{$tablet-lg}) {grid-template-columns: repeat(3, 1fr);}
+    @media (max-width: #{$tablet-lg}) {
+      grid-template-columns: repeat(3, 1fr);
+      scroll-margin-top: 300px;
+    }
 
     @media (max-width: #{$tablet-sm}) {
       display: flex;
       flex-direction: column;
       align-items: center;
-
     }
   }
 

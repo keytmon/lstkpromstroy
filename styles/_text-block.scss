@@ -34,6 +34,6 @@
     @media (max-width: #{$mobile-lg}) {max-height: 212px;}
   }
 
-  .company-text-img {background-image: url("/img/text-block-img/company-text-img.jpg");}
-  .technology-text-img {background-image: url("/img/text-block-img/technology-text-img.jpg");}
+  .company-text-img {background-image: url("../img/text-block-img/company-text-img.jpg");}
+  .technology-text-img {background-image: url("../img/text-block-img/technology-text-img.jpg");}
 }

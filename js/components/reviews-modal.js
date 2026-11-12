@@ -31,7 +31,7 @@ export class ReviewsModal extends HTMLElement {
                             <label class="reviews-modal__file-upload">
                                 <input type="file" class="reviews-modal__file-input" accept="image/*">
                                 <span class="reviews-modal__file-btn text">
-                                    <img src="/img/icons/attach.svg" alt="" class="reviews-modal__attach-icon">
+                                    <img src="../img/icons/attach.svg" alt="" class="reviews-modal__attach-icon">
                                     Прикрепите файл
                                 </span>
                             </label>
@@ -108,7 +108,7 @@ export class ReviewsModal extends HTMLElement {
                 if (e.target.files && e.target.files.length > 0) {
                     const fileName = e.target.files[0].name;
                     fileBtnText.innerHTML = `
-                <img src="/img/icons/attach.svg" alt="скрепка" class="modal__attach-icon">
+                <img src="../img/icons/attach.svg" alt="скрепка" class="modal__attach-icon">
                 ${fileName}
             `;
                     fileBtnText.style.color = '#12223C';
