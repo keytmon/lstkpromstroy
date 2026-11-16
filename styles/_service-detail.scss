@@ -30,7 +30,11 @@
     &:hover {text-decoration: none;}
   }
 
-  a {color: #FFB706;}
+  a {
+    color: #FFB706;
+
+    &.more-text-btn {color: #000;}
+  }
 
   &__img {
     background-image: url("../img/services/service-detail-1.jpg");

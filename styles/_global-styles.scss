@@ -30,7 +30,18 @@ header {
   z-index: 5;
 }
 
-a {color: #12223C}
+a {color: #12223C;}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 1px solid #FFB706;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
 
 .address:before {background-image: url("../img/icons/location.svg");}
 
@@ -88,6 +99,8 @@ h2,
 
   @media (max-width: #{$tablet-sm}) {font-size: 24px;}
 }
+
+button, .btn {cursor: pointer;}
 
 .btn {
   border-radius: 4px;

@@ -103,6 +103,17 @@ a {
   color: #12223C;
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 1px solid #FFB706;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
 .address:before {
   background-image: url("../img/icons/location.svg");
 }
@@ -181,6 +192,10 @@ h2,
   .title {
     font-size: 24px;
   }
+}
+
+button, .btn {
+  cursor: pointer;
 }
 
 .btn {
@@ -2755,6 +2770,9 @@ h2,
 .service-detail a {
   color: #FFB706;
 }
+.service-detail a.more-text-btn {
+  color: #000;
+}
 .service-detail__img {
   background-image: url("../img/services/service-detail-1.jpg");
   background-repeat: no-repeat;
@@ -2992,7 +3010,7 @@ h2,
 .articles__item-img, .news__item-img {
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("/img/articles/preview.jpg");
+  background-image: url("../img/articles/preview.jpg");
   width: 100%;
   height: 100%;
   transition: transform 0.4s ease;
