@@ -744,12 +744,12 @@ button, .btn {
   height: 3px;
   background-color: #FFB706;
 }
-.header-bottom__menu-item:hover .header-bottom__dropdown {
+.header-bottom__menu-item:hover .header-bottom__dropdown, .header-bottom__menu-item:focus-within .header-bottom__dropdown {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
-.header-bottom__menu-item:hover.menu-arrow a::after {
+.header-bottom__menu-item:hover.menu-arrow a::after, .header-bottom__menu-item:focus-within.menu-arrow a::after {
   width: calc(100% + 20px);
 }
 .header-bottom__dropdown {
@@ -885,7 +885,7 @@ button, .btn {
 .slider__slide {
   z-index: 0;
   position: relative;
-  background-image: url("../img/main/banner.png");
+  background-image: url("../img/main/banner.webp");
   background-repeat: no-repeat;
   background-size: cover;
   height: 800px;
@@ -1253,7 +1253,7 @@ button, .btn {
   }
 }
 .about-us__img {
-  background-image: url("../img/main/about-img.jpg");
+  background-image: url("../img/main/about-img.webp");
   background-repeat: no-repeat;
   background-size: cover;
   height: 369px;
@@ -2009,7 +2009,7 @@ button, .btn {
 .main-text-block__img {
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("../img/text-block-img/text-img.jpg");
+  background-image: url("../img/text-block-img/text-img.webp");
   width: 100%;
   height: 369px;
   background-position: center;
@@ -2139,7 +2139,7 @@ button, .btn {
 .callback__img {
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("../img/main/callback-form-img.jpg");
+  background-image: url("../img/main/callback-form-img.webp");
   width: 850px;
   height: 700px;
 }
@@ -2373,10 +2373,10 @@ button, .btn {
   }
 }
 .text-block .company-text-img {
-  background-image: url("../img/text-block-img/company-text-img.jpg");
+  background-image: url("../img/text-block-img/company-text-img.webp");
 }
 .text-block .technology-text-img {
-  background-image: url("../img/text-block-img/technology-text-img.jpg");
+  background-image: url("../img/text-block-img/technology-text-img.webp");
 }
 
 .work-scheme {
@@ -3010,7 +3010,7 @@ button, .btn {
 .articles__item-img, .news__item-img {
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("../img/articles/preview.jpg");
+  background-image: url("../img/articles/preview.webp");
   width: 100%;
   height: 100%;
   transition: transform 0.4s ease;

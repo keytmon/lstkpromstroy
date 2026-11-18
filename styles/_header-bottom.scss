@@ -93,7 +93,8 @@
       }
     }
 
-    &:hover {
+    &:hover,
+    &:focus-within {
       .header-bottom__dropdown {
         opacity: 1;
         visibility: visible;
